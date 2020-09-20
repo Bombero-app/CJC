@@ -1,0 +1,43 @@
+{
+    "name": "bombero-app/cjc",
+    "description": "Custom Job Consumer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gaetano Del Prete",
+            "email": "gaedelprete@gmail.com",
+            "homepage": "https://gaetano.me"
+        }
+    ],
+    "homepage": "https://github.com/bombero-app/cjc",
+    "keywords": ["Laravel", "CJC"],
+    "require": {
+        "illuminate/support": "~5|~6|~7|~8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~8.0|~9.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4|~5|~6",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BomberoApp\\CJC\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BomberoApp\\CJC\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BomberoApp\\CJC\\CJCServiceProvider"
+            ],
+            "aliases": {
+                "CJC": "BomberoApp\\CJC\\Facades\\CJC"
+            }
+        }
+    }
+}
